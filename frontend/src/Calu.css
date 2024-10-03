@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+  
+  }
+  
+  .container {
+    display: flex;
+    max-width: 900px;
+    margin: 20px auto;
+    cursor: pointer;
+  }
+  .prev{
+    background-color: white;
+    color: black;
+    border: none;
+  }
+  .month-title{
+    background-color: white;
+    color: black;
+    border: none;
+  }
+  .next{
+    background-color: white;
+    color: black;
+    border: none;
+  }
+  
+  .calendar-section, .booking-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
+  .calendar-section {
+    width: 60%;
+  }
+  
+  .booking-section {
+    width: 40%;
+  }
+  
+  .month {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .month-title {
+    font-size: 1.5em;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  td {
+    background-color: #f2f2f2;
+    cursor: pointer;
+  }
+  
+  td.selected {
+    background-color: #00cec9;
+    color: white;
+  }
+  
+  .but {
+    background-color: #00cec9;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .but:hover {
+    background-color: #01a7a7;
+  }
+  /* Additional styles for the status dots */
+.status-dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin: 5px auto;
+  }
+  
+  .status-dot.free {
+    background-color: green; /* Green dot for free */
+  }
+  
+  .status-dot.registered {
+    background-color: red; /* Red dot for registered */
+  }
+  
+  .status-dot.waiting {
+    background-color: yellow; /* Yellow dot for waiting */
+  }
+  

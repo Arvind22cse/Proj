@@ -1,0 +1,51 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    position: fixed; /* Fix the navbar position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure the navbar stays on top of other elements */
+}
+
+.navbar__left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+.navbar__title {
+    margin-left: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.navbarmenu {
+    display: flex;
+    list-style-type: none;
+}
+
+.navbarmenu li {
+    margin-right: 20px;
+}
+
+/* Home link specific style */
+.home {
+    color: white;
+}
+
+/* Hover effect for other links */
+.hov {
+    color: rgb(255, 255, 255);
+}
+
+.hov:hover {
+    color: yellow;
+}

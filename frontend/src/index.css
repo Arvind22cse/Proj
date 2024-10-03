@@ -1,0 +1,149 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+.carousel__wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+}
+
+.navbar {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+}
+.slider {
+	background: white;
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+	height: 100px;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	width: 960px;
+	
+	
+	
+}.slide-track {
+		animation: scroll animationSpeed linear infinite;
+		display: flex;
+		width: calc(250px * 14);
+	}
+	
+	.slide {
+		height: 100px;
+		width: 250px;
+	}
+
+.navbar__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbarmenu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  color: white;
+}
+a{
+text-decoration: none;
+color: wheat;
+}
+.navbar__menu li {
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.carousel__inner {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Makes the image cover 70% of the screen */
+}
+
+.carousel__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+}
+
+.carousel__slide-item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.carousel__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel__content {
+  padding: 2rem;
+  text-align: center;
+  background-color: white;
+}
+
+.carousel__content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.carousel__content p {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  color: #555;
+}
+
+.carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 3;
+}
+#run{
+  height: 100%;
+  margin-bottom: 50px;
+}
+
+.carousel__btn--prev {
+  left: 1rem;
+}
+
+.carousel__btn--next {
+  right: 1rem;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto; /* Ensures footer stays at the bottom */
+}
+

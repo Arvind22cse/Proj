@@ -1,51 +1,66 @@
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 10px;
-    position: fixed; /* Fix the navbar position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
-    z-index: 1000; /* Ensure the navbar stays on top of other elements */
-}
-
-.navbar__left {
-    display: flex;
-    align-items: center;
-}
-
 .logo {
     width: 40px;
     height: 40px;
     border-radius: 100%;
-}
-
-.navbar__title {
-    margin-left: 10px;
-    color: white;
-    font-size: 20px;
-}
-
-.navbarmenu {
+  }
+  .nav-map-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  /* Style for hover effects */
+  .hov:hover {
+    color: #0066ff;
+  }
+  
+  /* Navbar brand text */
+  .navbar-brand span {
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+  
+  /* General styling for links */
+  .nav-item {
+    color: #333;
+    margin-left: 20px;
+    font-size: 1rem;
+  }
+  
+  .nav-item:hover {
+    color: #007bff; /* Bootstrap primary color */
+  }
+  
+  /* Navbar shadow and padding for neatness */
+  .shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  }
+  
+  .py-3 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  /* Center content vertically */
+  .nav-map {
     display: flex;
-    list-style-type: none;
-}
-
-.navbarmenu li {
-    margin-right: 20px;
-}
-
-/* Home link specific style */
-.home {
-    color: white;
-}
-
-/* Hover effect for other links */
-.hov {
-    color: rgb(255, 255, 255);
-}
-
-.hov:hover {
-    color: yellow;
-}
+    align-items: center;
+  }
+  
+  /* Ensure correct alignment of navbar items */
+  .navbar-brand {
+    margin-right: auto; /* Ensure logo stays on the left */
+  }
+  
+  /* Make the navbar responsive */
+  @media (max-width: 768px) {
+    .nav-map-icon {
+      width: 25px;
+      height: 25px;
+    }
+  
+    .nav-item {
+      font-size: 0.875rem; /* Smaller font size for smaller screens */
+      margin-right: 5px;
+    }
+  }

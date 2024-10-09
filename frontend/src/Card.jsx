@@ -24,17 +24,17 @@ function Card() {
   return (
     <>
       <Navbar />
-
-      <div className="containerm">
-        <div  id="card" className="row">
-          {/* Loop through data and assign each image */}
+      <div className="container-fluid mt-7 " id="containerism">
+        <div className="row justify-content-center text-center">
           {data.map((item, index) => (
-            <div id="" className="col-md-4" key={index}>
-              <div className="image">
-                <img src={item.image} className="hi" alt={`Image ${index + 1}`} />
-                <h1 className="h1">{item.title}</h1>
+            <div className="col-lg-4 col-md-6 col-sm-12 mb-4" key={index}>
+              <div className="card d-flex justify-content-center" id="image">
+                <img src={item.image} id="hi" className="card-img-top" alt={item.title} />
+                <div className="card-body">
+                  <h5 className="card-title" id="h1">{item.title}</h5>
+                </div>
               </div>
-              <h1 className='desc'>{item.description}</h1>
+              <p className="desc">{item.description}</p>
             </div>
           ))}
         </div>

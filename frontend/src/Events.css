@@ -1,0 +1,76 @@
+/* Container styles */
+#containerism {
+    margin-top: 10%;
+}
+
+/* Image container styling */
+.image-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: white;
+}
+
+.image-container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Event image styling */
+.event-image {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Title and description styling */
+.event-title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.event-description {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    padding: 10px;
+}
+
+/* Adjustments for spacing between cards */
+.col-lg-4, .col-md-6, .col-sm-12 {
+    padding: 15px;
+}
+
+/* Responsive width and height adjustments */
+#e1, #e2, #e3 {
+    width: 100%;
+    height: auto;
+}
+
+/* Responsive behavior for different screen sizes */
+@media (max-width: 768px) {
+    .event-title {
+        font-size: 1.2rem;
+    }
+
+    .event-description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .event-title {
+        font-size: 1rem;
+    }
+
+    .event-description {
+        font-size: 0.9rem;
+    }
+}

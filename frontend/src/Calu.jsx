@@ -73,22 +73,21 @@ const Calu = () => {
     setSelectedDate(`${day}-${currentMonth + 1}-${currentYear}`);
   };
 
-  // Handle form submission
-  const handleBookingSubmit = (e) => {
-    e.preventDefault();
-
+  // Handle form submission (Booking)
+  const handleBookingSubmit = () => {
     if (!selectedDate) {
       alert('Please select a date.');
       return;
     }
 
     const newBookings = { ...bookings };
-
+    
     if (!newBookings[selectedDate]) {
       newBookings[selectedDate] = [];
     }
 
-    newBookings[selectedDate].push({ name, timeSlot, status: 'registered' }); // Example default status: 'registered'
+    newBookings[selectedDate].push({ name, timeSlot, status: 'registered' });
+
     setBookings(newBookings);
     setName('');
     setTimeSlot('');
@@ -101,23 +100,6 @@ const Calu = () => {
       return bookings[dateKey][0].status; // Returning first status found for simplicity
     }
     return 'free'; // Default status
-  };
-
-  // Render booked slots
-  const renderBookings = () => {
-    const slots = [];
-
-    for (const [date, bookingsList] of Object.entries(bookings)) {
-      bookingsList.forEach(booking => {
-        slots.push(
-          <li key={`${date}-${booking.timeSlot}`}>
-            {date} - {booking.name} - {booking.timeSlot} ({booking.status})
-          </li>
-        );
-      });
-    }
-
-    return slots;
   };
 
   return (
@@ -151,10 +133,9 @@ const Calu = () => {
                     <td key={j} onClick={() => day && selectDate(day)}
                       className={day && `${day}-${currentMonth + 1}-${currentYear}` === selectedDate ? 'selected' : ''}>
                       {day || ''}
-                      {/* Adding colored dot for status */}
-                      {/* {day && (
-                        <div className={`status-dot ${status}`}></div>
-                      )} */}
+                      {day && status === 'registered' && (
+                        <div className="status-dot registered"></div> // Show red dot for registered
+                      )}
                     </td>
                   );
                 })}
@@ -167,12 +148,7 @@ const Calu = () => {
       {/* Booking Section */}
       <div className="booking-section">
         <h3>Book Seminar Hall</h3>
-        
-          <button type="submit" className='but'>Book Now</button>
-        
-
-       
-       
+        <button type="submit" className="but" onClick={handleBookingSubmit}>Book Now</button>
       </div>
     </div>
   );
